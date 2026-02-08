@@ -1,0 +1,110 @@
+# Multimodal Medical Reasoning 🧠🏥
+
+A research-oriented framework for **multimodal medical reasoning**, combining
+medical images, clinical text, and structured patient data to produce
+**interpretable, evidence-grounded clinical decisions**.
+
+---
+
+## 🔬 Research Motivation
+
+Clinical reasoning rarely depends on a single modality. Physicians integrate:
+- Radiology images (X-rays, CT, MRI)
+- Clinical notes and reports
+- Structured EHR data
+- Medical knowledge and guidelines
+
+This project investigates **how multimodal foundation models reason in medical
+settings**, focusing on:
+- Cross-modal reasoning
+- Evidence grounding
+- Reduction of hallucinations
+- Clinical consistency
+
+---
+
+## 🎯 Research Objectives
+
+- Build multimodal models for medical reasoning
+- Study **fusion strategies** (early, late, cross-attention)
+- Evaluate **reasoning quality**, not just accuracy
+- Introduce **agent-based clinical reasoning workflows**
+- Analyze failure modes and hallucinations
+
+---
+
+## 🧠 Modalities Used
+
+| Modality | Examples |
+|--------|---------|
+| Vision | Chest X-ray, MRI, CT |
+| Text | Radiology reports, discharge summaries |
+| Structured | Lab values, vitals |
+| Knowledge | Clinical guidelines |
+
+---
+
+## 🏗 Architecture Overview
+
+Image Encoder ─┐
+├── Multimodal Fusion ── Reasoning Module ── Diagnosis
+Text Encoder ──┘
+
+
+Key components:
+- Vision encoder (ViT / ResNet)
+- Clinical language model (ClinicalBERT / LLaMA-based)
+- Cross-attention fusion
+- Chain-of-thought reasoning
+- Evidence verification agents
+
+---
+
+## 📊 Datasets Supported
+
+- MedQA (medical QA)
+- VQA-RAD (visual question answering)
+- MIMIC-CXR (radiology + reports)
+- Custom multimodal clinical datasets
+
+See `docs/datasets.md` for details.
+
+---
+
+## 🧪 Experiments
+
+- Multimodal vs unimodal reasoning
+- Modality ablation studies
+- Zero-shot medical reasoning
+- Hallucination analysis
+- Agent-based reasoning pipelines
+
+---
+
+## 📈 Evaluation Metrics
+
+- Accuracy / F1
+- Reasoning faithfulness
+- Evidence grounding score
+- Clinical consistency
+- Uncertainty calibration
+
+---
+
+## ⚠️ Ethics & Safety
+
+- No clinical deployment
+- Research-only usage
+- HIPAA-compliant data handling
+- Bias and hallucination analysis
+
+See `docs/ethics.md`.
+
+---
+
+## 🚀 Getting Started
+
+```bash
+conda env create -f environment.yml
+conda activate med-reasoning
+python training/train.py --config configs/multimodal_reasoning.yaml
