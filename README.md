@@ -45,7 +45,7 @@ Minimal next steps I can do: add `requirements.txt`, scaffold `configs/base.yaml
 ## Repository Layout
 
 The repository follows this layout (created/scaffolded):
-
+```bash
 multimodal-medical-reasoning/
 │
 ├── README.md
@@ -152,4 +152,4 @@ multimodal-medical-reasoning/
 	 ├── ethics.md
 	 └── roadmap.md
 
-This scaffold includes placeholder modules and config files to help you start experiments quickly.
+```
